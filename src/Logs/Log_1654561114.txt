@@ -1,0 +1,119 @@
+
+ • Exunys Sandbox (Sandboxed & Logged @06/07/22 02:18:34)
+
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
+
+ [+] (3) [loadstring] called with {
+	String = [=[
+		local Test = 5
+		print("Test", Test)
+		return true
+	]=],
+	Chunk = nil
+ }
+
+ [+] (9) [require] called with {
+	Module = 123456789
+ }
+
+ [+] (10) [require] called with {
+	Module = 987654321
+ }
+
+ [+] (20) [setmetatable] called with {
+	Table = {
+		[1] = "Test"
+ 	},
+	Metatable = {
+		["__newindex"] = "function: 00000000008F4AD0 [undefined / closure (anonymous function)]"
+ 	}
+ }
+
+ [+] (22) [rawset] called with {
+	Table = {
+		[1] = "Test"
+ 	},
+	Index = 1,
+	Value = "Test2"
+ }
+
+ [+] (24) [rawget] called with {
+	Table = {
+		[1] = "Test2"
+ 	},
+	Index = 1
+ }
+
+ [+] (28) [collectgarbage] called with {
+	Operation = "count",
+	Arguments = {
+		[1] = "No Arguments..."
+ 	}
+ }
+
+ [+] (32) [math] new index {
+	Table = {
+		["log"] = "function: 0000000000A0E180 [undefined / closure (anonymous function)]",
+		["max"] = "function: 0000000000A0E6F0 [undefined / closure (anonymous function)]",
+		["acos"] = "function: 0000000000A0D700 [undefined / closure (anonymous function)]",
+		["huge"] = 1.#INF,
+		["ldexp"] = "function: 0000000000A0E8A0 [undefined / closure (anonymous function)]",
+		["pi"] = 3.1415926535898,
+		["cos"] = "function: 0000000000A0E270 [undefined / closure (anonymous function)]",
+		["tanh"] = "function: 00000000008F07F0 [undefined / closure (anonymous function)]",
+		["pow"] = "function: 0000000000A0E510 [undefined / closure (anonymous function)]",
+		["deg"] = "function: 0000000000A0E810 [undefined / closure (anonymous function)]",
+		["tan"] = "function: 00000000008F03D0 [undefined / closure (anonymous function)]",
+		["cosh"] = "function: 0000000000A0E7E0 [undefined / closure (anonymous function)]",
+		["sinh"] = "function: 0000000000A0E720 [undefined / closure (anonymous function)]",
+		["random"] = "function: 0000000000A0E3F0 [undefined / closure (anonymous function)]",
+		["randomseed"] = "function: 0000000000A0E5D0 [undefined / closure (anonymous function)]",
+		["frexp"] = "function: 0000000000A0E450 [undefined / closure (anonymous function)]",
+		["ceil"] = "function: 0000000000A0E900 [undefined / closure (anonymous function)]",
+		["floor"] = "function: 0000000000A0E540 [undefined / closure (anonymous function)]",
+		["rad"] = "function: 0000000000A0E3C0 [undefined / closure (anonymous function)]",
+		["abs"] = "function: 0000000000A0D970 [undefined / closure (anonymous function)]",
+		["sqrt"] = "function: 00000000008F0160 [undefined / closure (anonymous function)]",
+		["modf"] = "function: 0000000000A0E1B0 [undefined / closure (anonymous function)]",
+		["asin"] = "function: 0000000000A0D5E0 [undefined / closure (anonymous function)]",
+		["min"] = "function: 0000000000A0E7B0 [undefined / closure (anonymous function)]",
+		["mod"] = "function: 0000000000A0E210 [undefined / closure (anonymous function)]",
+		["fmod"] = "function: 0000000000A0E210 [undefined / closure (anonymous function)]",
+		["log10"] = "function: 0000000000A0E420 [undefined / closure (anonymous function)]",
+		["atan2"] = "function: 0000000000A0D610 [undefined / closure (anonymous function)]",
+		["exp"] = "function: 0000000000A0E870 [undefined / closure (anonymous function)]",
+		["sin"] = "function: 00000000008F0250 [undefined / closure (anonymous function)]",
+		["atan"] = "function: 0000000000A0E8D0 [undefined / closure (anonymous function)]"
+ 	},
+	Index = "Test",
+	Value = "function: 00000000008F4CB0 [undefined / closure (anonymous function)]"
+ }
+
+ [+] (41) Potential crash attempt with [os.date] {
+	Format = "%v",
+	Time = nil
+ }
+
+ [+] (45) [os.execute] called with {
+	Command = "echo os.execute check failed"
+ }
+
+ [+] (47) Attempted to terminate program with [os.exit] {
+	Code = nil
+ }
+
+ [+] (49) [os.tmpname] called
+
+ [+] (51) [string.dump] called with {
+	Function = "dump"
+ }
+
+ [+] (55) [hookfunction] called with {
+	Old Function = "hookfunction",
+	New Function = "hookfunction"
+ }
+
+ [+] (87) new index in the global environment {
+	Index = nil,
+	Value = "Test"
+ }
