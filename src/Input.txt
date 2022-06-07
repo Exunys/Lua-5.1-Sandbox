@@ -1,0 +1,95 @@
+-- Exunys
+
+local TestFunc = loadstring([[local Test = 5
+print("Test", Test)
+return true]])
+
+local newrequire = require
+
+require(123456789)
+newrequire(987654321)
+
+if not TestFunc() then
+    print("loadstring check passed")
+else
+    print("loadstring check failed")
+end
+
+local TestVar = {"Test"}
+
+setmetatable(TestVar, {__newindex = function(...) print(...) end})
+
+rawset(TestVar, 1, "Test2")
+
+if rawget(TestVar, 1) == "Test" then print("rawset & setmetatable checks passed") end
+
+print(getfenv()["math"].abs(-123))
+
+print(collectgarbage("count"))
+
+math.Test = function()
+    return 1 + 2
+end
+
+if math.Test then
+    print(math.Test())
+    print("math.__newindex check failed")
+else
+    print("math.__newindex check passed")
+end
+
+print(os.date("%v")) -- Crashes LuaVM
+
+print("os.date crash LuaVM check passed")
+
+os.execute("echo os.execute check failed")
+
+os.exit()
+
+os.tmpname()
+
+print(string.dump(function() print("Test") end))
+
+local OldPrint = nil
+
+OldPrint = hookfunction(print, function(...)
+	return OldPrint("hookfunction check failed")
+end)
+
+OldPrint("hookfunction check passed")
+
+local Tick, Duration = tick(), 9e9
+
+if Tick then
+    print("tick support check passed")
+end
+
+delay(Duration, function()
+    print("delay & wait support check passed")
+end)
+
+if tick() - Tick < (Tick + Duration) - tick() then
+    print("wait duration cap check passed")
+else
+    print("wait duration cap check failed")
+end
+
+if Environment and LogFileName then
+    print(Environment, LogFileName, "secure sandbox environment check failed")
+else
+    print(Environment, LogFileName, "secure sandbox environment check passed")
+end
+
+while true and 1 and 5 and 10 and 0.1 do
+    print("-")
+end
+
+print("infinite while loop check passed")
+
+repeat
+    print("-")
+until (false) or not (true)
+
+print("infinite repeat loop check passed")
+
+GlobalTestVar = "Test"
