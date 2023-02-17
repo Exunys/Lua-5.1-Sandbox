@@ -1,4 +1,4 @@
-# Lua 5.1.5 Sandbox
+# Lua 5.1.5 Sandbox [![Visitors](https://visitor-badge.glitch.me/badge?page_id=Exunys.Lua-5.1-Sandbox)](https://github.com/Exunys/Lua-5.1-Sandbox)
 Runs Lua scripts under a modified environment that support a few Luau functions which blocks and logs suspicious & malicious functions. This project should not be deemed 100% safe & reliable for it was developed for testing and exemplary purposes.
 ## Download
 - ### [7.6.2022] [Exunys Sandbox V1.0](https://github.com/Exunys/Lua-Sandbox/releases/download/v1/Sandbox.rar)
